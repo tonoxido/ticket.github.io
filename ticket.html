@@ -1,0 +1,73 @@
+<!DOCTYlabelE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewlabelort" content="width=device-width, initial-scale=1.0">
+    <title>My Ticket</title>
+</head>
+<body>
+    <div class="ticket">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="header">
+            <label>CAFETERIA</label><br>
+            <label>CAFETERIA ING CIVIL, UANL</label><br>
+            <label>CHILAQUIL1 C19 Ticket:&nbsp&nbsp</label><label id="ticket_y_fecha"></label><br>
+            <label>5</label><br>
+            <label>SYS&nbsp&nbspCliente&nbsp&nbspde&nbsp&nbsp&nbspmostrador</label><br>
+        </div>
+        <br>
+        <label class="guion">-----------------------------------------</label><br>
+        <label>&nbsp1&nbsp&nbsp&nbspCHILAQUILES&nbspCHICOS&nbsp&nbsp50.00&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp50.00</label><br>
+        <label>&nbsp&nbsp1&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTOTAL&nbsp&nbsp&nbsp&nbsp&nbsp$50.00&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><br>
+        <label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPago&nbspen&nbspEFE&nbsp&nbsp&nbsp$500.00</label><br>
+        <label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCambio:&nbsp&nbsp&nbsp&nbsp&nbsp$450.00</label><br>
+        <label class="texto_de_monto">CINCUENTA PESOS 00/100 MONEDA NACIONAL</label><br>
+    </div>
+    <div class="No_print">
+        <br>
+        <br>
+        <br>
+        <h3><label>Ingresa los datos:  </label></h3>
+        <input type="text" id="entrada">
+        <br>
+        <br>
+        <button onclick="Cambiar()">Cambiar</button>
+        <br>
+        <br>
+        <button onclick="imprimir()">Imprimir</button>
+    </div>
+</body>
+</html>
+<script>
+    function Cambiar(){
+        let entrada = document.getElementById("entrada").value;
+        document.getElementById("ticket_y_fecha").innerHTML = entrada;
+    }
+    function imprimir(){
+        window.print();
+    }
+    
+</script>
+<style>
+    @media print {
+        .No_print {
+            display: none;
+        }
+        @page { margin: 0; }
+        body { margin: 1cm; }
+
+    }
+    * {
+        font-size: 12px;
+        font-family: 'Times New Roman';
+    }
+    .guion{
+        font-size: 16.3px;
+    }
+    .texto_de_monto{
+        font-size: 9px;
+    }
+</style>
